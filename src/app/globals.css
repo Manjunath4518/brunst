@@ -39,11 +39,11 @@
 @layer utilities {
   .site-main {
     @apply relative z-10 opacity-0;
-    animation: mainReveal 1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-    animation-delay: 2.2s;
+    animation: mainReveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation-delay: 2s;
   }
   .inner {
-    @apply max-w-[1000px] mx-auto px-8 py-32 md:py-48 text-center flex flex-col items-center justify-center;
+    @apply max-w-[1000px] mx-auto px-8 py-20 md:py-32 text-center flex flex-col items-center justify-center;
   }
   .luxury-heading {
     @apply font-headline uppercase tracking-[0.6em] text-primary mb-6;
@@ -52,7 +52,7 @@
     @apply rounded-[2.5rem] border border-primary/20 px-8 py-3 text-[10px] uppercase tracking-[0.4em] transition-all duration-500 bg-transparent inline-flex items-center justify-center min-h-[2.25rem] text-primary whitespace-nowrap;
   }
   .luxury-button:hover {
-    @apply border-accent text-accent scale-[1.05] shadow-[0_0_30px_rgba(0,255,255,0.3)];
+    @apply border-accent text-accent scale-[1.02] shadow-[0_0_20px_rgba(0,255,255,0.2)];
   }
 }
 
@@ -62,51 +62,46 @@
 }
 
 /* Fast Premium Intro Sequence */
-@keyframes snapIn {
-  0% { 
-    opacity: 0; 
-    transform: scale(0.9); 
-    filter: blur(10px); 
-  }
-  40% { 
-    opacity: 1; 
-    transform: scale(1.05); 
-    filter: blur(0px); 
-  }
-  100% { 
-    opacity: 1; 
-    transform: scale(1); 
-    filter: blur(0px); 
-  }
+@keyframes snapEntry {
+  0% { opacity: 0; transform: scale(0.95); filter: blur(8px); }
+  100% { opacity: 1; transform: scale(1); filter: blur(0); }
 }
 
-@keyframes taglineEntry {
+@keyframes bounceSettle {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+@keyframes taglineFade {
   0% { opacity: 0; transform: translateY(10px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes quickFadeOut {
-  0% { opacity: 1; filter: blur(0px); }
+@keyframes introExit {
+  0% { opacity: 1; filter: blur(0); }
   100% { opacity: 0; filter: blur(10px); }
 }
 
-@keyframes glowSpread {
-  0% { opacity: 0; }
-  100% { opacity: 0.15; }
+.animate-snap-entry {
+  animation: snapEntry 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
-.animate-snap-in {
-  animation: snapIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+.animate-bounce-settle {
+  animation: bounceSettle 0.3s cubic-bezier(0.45, 0, 0.55, 1) 0.5s forwards;
 }
 
-.animate-tagline-entry {
-  animation: taglineEntry 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.6s forwards;
+.animate-tagline-fade {
+  animation: taglineFade 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) 0.8s forwards;
 }
 
 .animate-intro-exit {
-  animation: quickFadeOut 0.8s cubic-bezier(0.65, 0, 0.35, 1) 2.2s forwards;
+  animation: introExit 0.6s cubic-bezier(0.65, 0, 0.35, 1) 2s forwards;
 }
 
-.animate-glow-spread {
-  animation: glowSpread 1.5s ease-out forwards;
+.fluid-brand-title {
+  font-size: clamp(28px, 6vw, 64px);
+  line-height: 1.1;
+  letter-spacing: 0.4em;
+  @apply luxury-heading mb-2;
 }
