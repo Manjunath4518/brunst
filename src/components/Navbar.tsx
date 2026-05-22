@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/5">
       <div className="max-w-[1000px] mx-auto px-8 py-6">
-        {/* Branding Block - Always Centered Horizontal Row */}
+        {/* Branding Block - Shared Header Layout */}
         <div className="flex items-center justify-center gap-6 mb-4">
           <Link href="/" className="relative w-16 h-16 md:w-20 md:h-20 transition-transform hover:scale-105">
              <Image 

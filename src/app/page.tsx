@@ -7,7 +7,7 @@ export default function Home() {
     <div className="site-main">
       <section className="inner min-h-screen pt-40">
         <div className="subtle-box max-w-[800px] w-full space-y-12">
-          {/* Hero Content */}
+          {/* Hero Content - Clean centered layout */}
           <div className="text-center space-y-6">
             <p className="font-body text-primary/60 text-[10px] md:text-xs tracking-[0.4em] uppercase italic">
               Aiming for only that stands out!
@@ -19,7 +19,7 @@ export default function Home() {
 
           <div className="divider-line" />
 
-          {/* Navigation Grid (Icons style as Pill Buttons) */}
+          {/* Homepage Navigation Icons (Pill Buttons) */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full max-w-[500px] mx-auto">
             <LuxuryButton href="/services" className="w-full">What We Do</LuxuryButton>
             <LuxuryButton href="/brunstcam" className="w-full">Brunstcam</LuxuryButton>

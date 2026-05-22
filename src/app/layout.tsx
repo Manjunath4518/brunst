@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ProjectNode;
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
@@ -29,6 +29,7 @@ export default function RootLayout({
         <AmbientBackground />
         
         <PageTransition>
+          <Navbar />
           <main className="relative min-h-screen">
             {children}
           </main>
