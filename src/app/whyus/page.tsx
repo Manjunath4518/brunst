@@ -13,16 +13,16 @@ export default function WhyUs() {
           
           <div className="space-y-8 text-primary/60 font-body text-sm md:text-base leading-relaxed">
             <p>
-              Brunst, earlier, was just an idea born out of the blue.
-              And, what’s better than to stick to the moment of blue?
+              Brunst, Earlier, Was Just An Idea Born Out Of The Blue.
+              And, What’s Better Than To Stick To The Moment Of Blue?
             </p>
 
             <p className="font-headline text-2xl md:text-3xl italic text-primary/80">
-              That’s what happened!
+              That’s What Happened!
             </p>
 
             <p>
-              What just was a fleeting thought now became the moment the world will love.
+              What Just Was A Fleeting Thought Now Became The Moment The World Will Love.
             </p>
           </div>
 
@@ -30,20 +30,20 @@ export default function WhyUs() {
 
           <div className="space-y-8 text-primary/60 font-body text-sm md:text-base leading-relaxed">
             <p>
-              The Blues know what the market needs.
-              You may argue that many understand the market better. So, what’s special here?
+              The Blues Know What The Market Needs.
+              You May Argue That Many Understand The Market Better. So, What’s Special Here?
             </p>
 
             <p className="font-headline text-xl md:text-2xl italic text-primary/80">
-              Well, imagine your business or brand having someone who can not only turn heads but also create a beeline towards your product?
+              Well, Imagine Your Business Or Brand Having Someone Who Can Not Only Turn Heads But Also Create A Beeline Towards Your Product?
             </p>
 
             <p>
-              And that’s what Brunst does.
+              And That’s What Brunst Does.
             </p>
 
             <p>
-              They not only understand but also plan to improve the business or brand in ways that bring authenticity to the centre stage, and what’s better than attracting the world through nothing but being yourself?
+              They Not Only Understand But Also Plan To Improve The Business Or Brand In Ways That Bring Authenticity To The Centre Stage, And What’s Better Than Attracting The World Through Nothing But Being Yourself?
             </p>
           </div>
 

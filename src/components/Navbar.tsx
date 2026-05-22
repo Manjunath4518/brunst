@@ -9,7 +9,6 @@ export default function Navbar() {
       <div className="max-w-[1000px] mx-auto px-8 py-6">
         <div className="flex items-center justify-center gap-6">
           <Link href="/" className="flex items-center gap-6 group">
-            {/* Logo */}
             <div className="relative w-16 h-16 md:w-20 md:h-20 transition-transform duration-500 group-hover:scale-105">
               <Image 
                 src="/brunst.png" 
@@ -20,7 +19,6 @@ export default function Navbar() {
               />
             </div>
 
-            {/* Text Block */}
             <div className="flex flex-col items-start">
               <h1 className="font-headline text-2xl md:text-3xl tracking-[0.02em] text-primary">
                 Brunst Studios

@@ -7,14 +7,14 @@ import PageTransition from '@/components/PageTransition';
 import IntroAnimation from '@/components/IntroAnimation';
 
 export const metadata: Metadata = {
-  title: 'Brunst Studios | The Brunstverse of Creativity',
-  description: 'A luxury creative agency for authors, brands, athletes, and interiors.',
+  title: 'Brunst Studios | The Brunstverse Of Creativity',
+  description: 'A Luxury Creative Agency For Authors, Brands, Athletes, And Interiors.',
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ProjectNode;
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" className="scroll-smooth">

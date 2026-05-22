@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -15,7 +14,7 @@ export default function AiArchitect() {
   const [result, setResult] = useState<AiNarrativeArchitectOutput | null>(null);
   const [tones, setTones] = useState<string[]>([]);
 
-  const toneOptions = ['Luxury', 'Avant-garde', 'Minimalist', 'Empowering', 'Classic', 'Seductive'];
+  const toneOptions = ['Luxury', 'Avant-Garde', 'Minimalist', 'Empowering', 'Classic', 'Seductive'];
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -43,16 +42,15 @@ export default function AiArchitect() {
       <header className="text-center mb-20 space-y-6">
         <div className="inline-flex items-center gap-2 text-accent luxury-heading text-[10px]">
           <Sparkles className="w-3 h-3" />
-          Powered by Brunstverse AI
+          Powered By Brunstverse AI
         </div>
         <h1 className="luxury-heading text-4xl md:text-5xl">Narrative Architect</h1>
         <p className="font-body text-primary/60 tracking-widest max-w-2xl mx-auto">
-          Articulate your brand's emotional soul. Our AI creative director helps you craft editorial copy and conceptual narratives.
+          Articulate Your Brand's Emotional Soul. Our AI Creative Director Helps You Craft Editorial Copy And Conceptual Narratives.
         </p>
       </header>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-        {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-8 glass-card p-10 rounded-sm border-primary/5">
           <div className="space-y-2">
             <Label className="luxury-heading text-[10px] tracking-[0.3em]">Brand Name</Label>
@@ -61,12 +59,12 @@ export default function AiArchitect() {
 
           <div className="space-y-2">
             <Label className="luxury-heading text-[10px] tracking-[0.3em]">Project Essence</Label>
-            <Textarea name="projectDescription" placeholder="What story are we telling?" className="bg-transparent border-primary/10 rounded-none min-h-[120px] focus-visible:ring-accent" required />
+            <Textarea name="projectDescription" placeholder="What Story Are We Telling?" className="bg-transparent border-primary/10 rounded-none min-h-[120px] focus-visible:ring-accent" required />
           </div>
 
           <div className="space-y-2">
             <Label className="luxury-heading text-[10px] tracking-[0.3em]">Audience</Label>
-            <Input name="targetAudience" placeholder="Who defines this space?" className="bg-transparent border-primary/10 rounded-none h-12 focus-visible:ring-accent" required />
+            <Input name="targetAudience" placeholder="Who Defines This Space?" className="bg-transparent border-primary/10 rounded-none h-12 focus-visible:ring-accent" required />
           </div>
 
           <div className="space-y-4">
@@ -88,7 +86,7 @@ export default function AiArchitect() {
           </div>
 
           <div className="space-y-2">
-            <Label className="luxury-heading text-[10px] tracking-[0.3em]">Key Phrases (Comma separated)</Label>
+            <Label className="luxury-heading text-[10px] tracking-[0.3em]">Key Phrases (Comma Separated)</Label>
             <Input name="keywords" placeholder="Excellence, Timeless, Motion" className="bg-transparent border-primary/10 rounded-none h-12 focus-visible:ring-accent" />
           </div>
 
@@ -97,13 +95,12 @@ export default function AiArchitect() {
           </LuxuryButton>
         </form>
 
-        {/* Results */}
         <div className="space-y-12">
           {!result && !loading && (
             <div className="h-full min-h-[600px] flex flex-col items-center justify-center text-center space-y-6 border border-dashed border-primary/10 rounded-sm p-12 opacity-50">
               <Sparkles className="w-12 h-12 text-accent/30" />
-              <p className="luxury-heading text-sm">Your Architect is Ready</p>
-              <p className="font-body text-xs tracking-[0.2em] uppercase">Fill out the brief to begin the orchestration</p>
+              <p className="luxury-heading text-sm">Your Architect Is Ready</p>
+              <p className="font-body text-xs tracking-[0.2em] uppercase">Fill Out The Brief To Begin The Orchestration</p>
             </div>
           )}
 

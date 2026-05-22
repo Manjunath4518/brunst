@@ -5,9 +5,9 @@ import { useEffect, useState } from 'react';
 export default function IntroAnimation() {
   const [isVisible, setIsVisible] = useState(true);
   const brandName = "Brunst Studios";
-  const letterDelay = 80; // ms
+  const letterDelay = 80;
   const buildTime = brandName.length * letterDelay;
-  const holdTime = 2000; // 2 seconds hold
+  const holdTime = 2000;
   const totalIntroTime = buildTime + holdTime + 800;
 
   useEffect(() => {
@@ -21,7 +21,6 @@ export default function IntroAnimation() {
 
   return (
     <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background pointer-events-none overflow-hidden animate-intro-exit">
-      {/* Background Aura */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div 
           className="w-[120vw] h-[120vw] rounded-full blur-[120px] opacity-10"
@@ -42,7 +41,7 @@ export default function IntroAnimation() {
               className="animate-letter-emerge"
               style={{ 
                 animationDelay: `${index * letterDelay}ms`,
-                fontWeight: 300 // Start light for the weight-transition effect
+                fontWeight: 300
               }}
             >
               {char === ' ' ? '\u00A0' : char}

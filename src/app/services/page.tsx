@@ -6,7 +6,7 @@ export default function Services() {
   const sections = [
     {
       title: "Home Of Authors (Write)",
-      items: ["Editing & Proofreading", "Design", "Formatting", "Publishing Setup", "Marketing Campaigns", "Optional Add-ons"]
+      items: ["Editing & Proofreading", "Design", "Formatting", "Publishing Setup", "Marketing Campaigns", "Optional Add-Ons"]
     },
     {
       title: "Home Of Brands (Create)",
@@ -26,7 +26,7 @@ export default function Services() {
     <div className="site-main">
       <section className="inner space-y-20">
         <header className="space-y-4">
-          <h1 className="luxury-heading text-3xl md:text-4xl">Write. Create. Play. Design</h1>
+          <h1 className="luxury-heading text-3xl md:text-4xl">Write. Create. Play. Design.</h1>
           <p className="font-body text-primary/40 text-[10px] md:text-xs tracking-[0.08em]">Home To A World Of Industries</p>
         </header>
 
