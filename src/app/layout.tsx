@@ -27,7 +27,7 @@ export default function RootLayout({
         <IntroAnimation />
         <CustomCursor />
         <AmbientBackground />
-        <Navbar />
+        
         <PageTransition>
           <main className="relative min-h-screen">
             {children}

@@ -7,26 +7,28 @@ export default function Home() {
   return (
     <div className="site-main">
       <section className="inner min-h-[100vh]">
-        <div className="flex flex-col items-center w-full max-w-4xl mx-auto">
-          {/* Perfectly Centered & Responsive Logo */}
-          <div className="relative w-[60vw] max-w-[280px] aspect-square mb-12">
-            <Image 
-              src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=600&h=600&auto=format&fit=crop" 
-              alt="Brunst Studios Logo" 
-              fill 
-              className="object-contain invert brightness-200"
-              priority
-              data-ai-hint="luxury logo"
-            />
-          </div>
+        <div className="flex flex-col items-center w-full max-w-5xl mx-auto">
           
-          <div className="space-y-4 w-full px-4 mb-16">
-            <h1 className="fluid-brand-title">
-              Brunst Studios
-            </h1>
-            <p className="font-body text-primary/60 text-[10px] md:text-xs tracking-[0.5em] uppercase text-center italic">
-              Aiming for only that stands out!
-            </p>
+          {/* Horizontal Landing Layout */}
+          <div className="flex flex-row items-center justify-center gap-8 md:gap-12 w-full mb-16">
+            <div className="relative w-[100px] h-[100px] md:w-[140px] md:h-[140px] flex-shrink-0">
+              <Image
+                src="/brunst.png"
+                alt="Brunst Studios Logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+            
+            <div className="flex flex-col items-start">
+              <h1 className="fluid-brand-title text-left">
+                BRUNST STUDIOS
+              </h1>
+              <p className="font-body text-primary/60 text-[10px] md:text-xs tracking-[0.5em] uppercase italic mt-2">
+                Aiming for only that stands out!
+              </p>
+            </div>
           </div>
 
           <p className="font-headline text-xl md:text-2xl italic text-primary/40 max-w-2xl leading-relaxed tracking-widest text-center mb-16 px-4">

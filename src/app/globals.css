@@ -4,25 +4,26 @@
 
 @layer base {
   :root {
-    --background: 226 73% 10%; /* Deep Blue */
-    --foreground: 51 60% 97%; /* Ivory */
-    --card: 226 73% 12%;
-    --card-foreground: 51 60% 97%;
-    --popover: 226 73% 12%;
-    --popover-foreground: 51 60% 97%;
-    --primary: 51 60% 97%;
-    --primary-foreground: 226 73% 10%;
-    --secondary: 226 73% 20%;
-    --secondary-foreground: 51 60% 97%;
-    --muted: 226 30% 25%;
-    --muted-foreground: 51 60% 80%;
-    --accent: 180 100% 50%; /* Cyan glow */
-    --accent-foreground: 226 73% 10%;
+    /* Updated to Ivory Background and Dark Blue Foreground */
+    --background: 60 100% 97%; /* Ivory #FFFFF0 */
+    --foreground: 226 73% 15%; /* Dark Blue */
+    --card: 60 100% 98%;
+    --card-foreground: 226 73% 15%;
+    --popover: 60 100% 98%;
+    --popover-foreground: 226 73% 15%;
+    --primary: 226 73% 15%;
+    --primary-foreground: 60 100% 97%;
+    --secondary: 226 73% 90%;
+    --secondary-foreground: 226 73% 15%;
+    --muted: 226 10% 90%;
+    --muted-foreground: 226 20% 40%;
+    --accent: 226 73% 63%; /* Blue from logo */
+    --accent-foreground: 60 100% 97%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 51 60% 97% / 0.1;
-    --input: 51 60% 97% / 0.1;
-    --ring: 180 100% 50%;
+    --border: 226 73% 15% / 0.1;
+    --input: 226 73% 15% / 0.1;
+    --ring: 226 73% 63%;
     --radius: 2.5rem;
   }
 }
@@ -40,10 +41,10 @@
   .site-main {
     @apply relative z-10 opacity-0;
     animation: mainReveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-    animation-delay: 4.8s; /* Adjusted for longer intro duration */
+    animation-delay: 5s;
   }
   .inner {
-    @apply max-w-[1000px] mx-auto px-8 py-20 md:py-32 text-center flex flex-col items-center justify-center;
+    @apply max-w-[1200px] mx-auto px-8 py-20 md:py-32 text-center flex flex-col items-center justify-center;
   }
   .luxury-heading {
     @apply font-headline uppercase tracking-[0.4em] text-primary mb-6;
@@ -52,7 +53,7 @@
     @apply rounded-[2.5rem] border border-primary/20 px-8 py-3 text-[10px] uppercase tracking-[0.4em] transition-all duration-500 bg-transparent inline-flex items-center justify-center min-h-[2.25rem] text-primary whitespace-nowrap;
   }
   .luxury-button:hover {
-    @apply border-accent text-accent scale-[1.02] shadow-[0_0_20px_rgba(0,255,255,0.2)];
+    @apply border-accent text-accent scale-[1.02] shadow-[0_0_20px_rgba(92,124,229,0.15)];
   }
 }
 
@@ -61,7 +62,6 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Letter Emerge Animation */
 @keyframes letterEmerge {
   0% {
     opacity: 0;
@@ -77,11 +77,10 @@
   }
 }
 
-/* Final Brand Pulse */
 @keyframes brandFinalPulse {
-  0% { transform: scale(1); filter: drop-shadow(0 0 0 transparent); }
-  50% { transform: scale(1.03); filter: drop-shadow(0 0 15px rgba(180, 100, 50, 0.3)); }
-  100% { transform: scale(1); filter: drop-shadow(0 0 0 transparent); }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
 }
 
 @keyframes taglineReveal {
@@ -116,11 +115,11 @@
   font-size: clamp(28px, 6vw, 64px);
   line-height: 1.1;
   letter-spacing: 0.3em;
-  @apply luxury-heading mb-2;
+  @apply luxury-heading mb-0;
 }
 
 .cursor-glow {
-  @apply fixed w-[40px] h-[40px] bg-accent/20 rounded-full blur-2xl pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-[width,height] duration-300;
+  @apply fixed w-[40px] h-[40px] bg-accent/10 rounded-full blur-2xl pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-[width,height] duration-300;
 }
 .cursor-dot {
   @apply fixed w-1.5 h-1.5 bg-accent rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2;
