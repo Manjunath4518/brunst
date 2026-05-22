@@ -39,8 +39,8 @@
 @layer utilities {
   .site-main {
     @apply relative z-10 opacity-0;
-    animation: mainReveal 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-    animation-delay: 5s;
+    animation: mainReveal 1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+    animation-delay: 2.2s;
   }
   .inner {
     @apply max-w-[1000px] mx-auto px-8 py-32 md:py-48 text-center flex flex-col items-center justify-center;
@@ -57,46 +57,56 @@
 }
 
 @keyframes mainReveal {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Cinematic Intro Sequence */
-@keyframes auraSpread {
-  0% { opacity: 0; transform: scale(0.8); }
-  100% { opacity: 0.4; transform: scale(1); }
+/* Fast Premium Intro Sequence */
+@keyframes snapIn {
+  0% { 
+    opacity: 0; 
+    transform: scale(0.9); 
+    filter: blur(10px); 
+  }
+  40% { 
+    opacity: 1; 
+    transform: scale(1.05); 
+    filter: blur(0px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: scale(1); 
+    filter: blur(0px); 
+  }
 }
 
-@keyframes cinematicTitle {
-  0% { opacity: 0; transform: scale(0.2); filter: blur(30px); }
-  35% { opacity: 1; transform: scale(1.4); filter: blur(0px); }
-  50% { transform: scale(1.45); filter: blur(0px); text-shadow: 0 0 20px rgba(253, 251, 242, 0.4); }
-  75% { transform: scale(1); filter: blur(0px); }
-  100% { opacity: 1; transform: scale(1); filter: blur(0px); }
-}
-
-@keyframes cinematicTagline {
-  0% { opacity: 0; transform: translateY(15px); }
+@keyframes taglineEntry {
+  0% { opacity: 0; transform: translateY(10px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes cinematicExit {
-  0% { opacity: 1; filter: blur(0px); transform: scale(1); }
-  100% { opacity: 0; filter: blur(15px); transform: scale(1.05); }
+@keyframes quickFadeOut {
+  0% { opacity: 1; filter: blur(0px); }
+  100% { opacity: 0; filter: blur(10px); }
 }
 
-.animate-aura-spread {
-  animation: auraSpread 3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+@keyframes glowSpread {
+  0% { opacity: 0; }
+  100% { opacity: 0.15; }
 }
 
-.animate-cinematic-title {
-  animation: cinematicTitle 4.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+.animate-snap-in {
+  animation: snapIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
-.animate-cinematic-tagline {
-  animation: cinematicTagline 1.5s cubic-bezier(0.65, 0, 0.35, 1) 3s forwards;
+.animate-tagline-entry {
+  animation: taglineEntry 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.6s forwards;
 }
 
-.animate-cinematic-exit {
-  animation: cinematicExit 1.2s cubic-bezier(0.65, 0, 0.35, 1) 4.8s forwards;
+.animate-intro-exit {
+  animation: quickFadeOut 0.8s cubic-bezier(0.65, 0, 0.35, 1) 2.2s forwards;
+}
+
+.animate-glow-spread {
+  animation: glowSpread 1.5s ease-out forwards;
 }
