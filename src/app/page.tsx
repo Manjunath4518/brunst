@@ -8,7 +8,7 @@ export default function Home() {
       <section className="inner min-h-screen pt-40">
         <div className="subtle-box max-w-[800px] w-full space-y-12">
           <div className="text-center space-y-6">
-            <p className="font-headline text-lg md:text-xl italic text-primary/30 tracking-[0.05em]">
+            <p className="font-headline text-xl md:text-2xl font-medium italic text-primary/40 tracking-tight">
               The Brunstverse Of Creativity
             </p>
           </div>

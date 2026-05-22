@@ -8,16 +8,16 @@ export default function WhyUs() {
       <section className="inner space-y-12 max-w-3xl">
         <div className="space-y-12 text-center w-full">
           <header className="space-y-6">
-            <h1 className="luxury-heading text-3xl md:text-4xl">Why Us</h1>
+            <h1 className="luxury-heading text-4xl md:text-5xl">Why Us</h1>
           </header>
           
-          <div className="space-y-8 text-primary/60 font-body text-sm md:text-base leading-relaxed">
+          <div className="space-y-8 text-primary/70 font-body text-base md:text-lg font-normal leading-relaxed">
             <p>
               Brunst, Earlier, Was Just An Idea Born Out Of The Blue.
               And, What’s Better Than To Stick To The Moment Of Blue?
             </p>
 
-            <p className="font-headline text-2xl md:text-3xl italic text-primary/80">
+            <p className="font-headline text-2xl md:text-3xl font-semibold italic text-primary/80 tracking-tight">
               That’s What Happened!
             </p>
 
@@ -28,13 +28,13 @@ export default function WhyUs() {
 
           <div className="divider-line" />
 
-          <div className="space-y-8 text-primary/60 font-body text-sm md:text-base leading-relaxed">
+          <div className="space-y-8 text-primary/70 font-body text-base md:text-lg font-normal leading-relaxed">
             <p>
               The Blues Know What The Market Needs.
               You May Argue That Many Understand The Market Better. So, What’s Special Here?
             </p>
 
-            <p className="font-headline text-xl md:text-2xl italic text-primary/80">
+            <p className="font-headline text-xl md:text-2xl font-medium italic text-primary/80 tracking-tight">
               Well, Imagine Your Business Or Brand Having Someone Who Can Not Only Turn Heads But Also Create A Beeline Towards Your Product?
             </p>
 
