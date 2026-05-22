@@ -40,13 +40,13 @@
   .site-main {
     @apply relative z-10 opacity-0;
     animation: mainReveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-    animation-delay: 2s;
+    animation-delay: 3.5s;
   }
   .inner {
     @apply max-w-[1000px] mx-auto px-8 py-20 md:py-32 text-center flex flex-col items-center justify-center;
   }
   .luxury-heading {
-    @apply font-headline uppercase tracking-[0.6em] text-primary mb-6;
+    @apply font-headline uppercase tracking-[0.4em] text-primary mb-6;
   }
   .luxury-button {
     @apply rounded-[2.5rem] border border-primary/20 px-8 py-3 text-[10px] uppercase tracking-[0.4em] transition-all duration-500 bg-transparent inline-flex items-center justify-center min-h-[2.25rem] text-primary whitespace-nowrap;
@@ -61,47 +61,64 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Fast Premium Intro Sequence */
-@keyframes snapEntry {
-  0% { opacity: 0; transform: scale(0.95); filter: blur(8px); }
-  100% { opacity: 1; transform: scale(1); filter: blur(0); }
+/* Premium Cinematic Multi-Phase Animation */
+@keyframes cinematicSnap {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+    filter: blur(10px);
+  }
+  15% {
+    opacity: 1;
+    transform: scale(1.1);
+    filter: blur(0);
+  }
+  45% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: scale(1);
+  }
+  85% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
-@keyframes bounceSettle {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.02); }
-  100% { transform: scale(1); }
-}
-
-@keyframes taglineFade {
-  0% { opacity: 0; transform: translateY(10px); }
+@keyframes taglineReveal {
+  0% { opacity: 0; transform: translateY(15px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes introExit {
+@keyframes introFadeOut {
   0% { opacity: 1; filter: blur(0); }
   100% { opacity: 0; filter: blur(10px); }
 }
 
-.animate-snap-entry {
-  animation: snapEntry 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+.animate-cinematic-snap {
+  animation: cinematicSnap 3.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
-.animate-bounce-settle {
-  animation: bounceSettle 0.3s cubic-bezier(0.45, 0, 0.55, 1) 0.5s forwards;
-}
-
-.animate-tagline-fade {
-  animation: taglineFade 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) 0.8s forwards;
+.animate-tagline-reveal {
+  animation: taglineReveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 2.2s forwards;
 }
 
 .animate-intro-exit {
-  animation: introExit 0.6s cubic-bezier(0.65, 0, 0.35, 1) 2s forwards;
+  animation: introFadeOut 0.8s cubic-bezier(0.65, 0, 0.35, 1) 3.5s forwards;
 }
 
 .fluid-brand-title {
   font-size: clamp(28px, 6vw, 64px);
   line-height: 1.1;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.3em;
   @apply luxury-heading mb-2;
+}
+
+.cursor-glow {
+  @apply fixed w-[40px] h-[40px] bg-accent/20 rounded-full blur-2xl pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-[width,height] duration-300;
+}
+.cursor-dot {
+  @apply fixed w-1.5 h-1.5 bg-accent rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2;
 }

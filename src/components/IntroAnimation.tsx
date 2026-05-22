@@ -1,15 +1,15 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export default function IntroAnimation() {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // Total duration of 2.5 seconds
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 2600); 
+    }, 4200); 
     return () => clearTimeout(timer);
   }, []);
 
@@ -20,22 +20,36 @@ export default function IntroAnimation() {
       {/* Background Aura */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div 
-          className="w-[100vw] h-[100vw] rounded-full blur-[100px] opacity-20"
+          className="w-[120vw] h-[120vw] rounded-full blur-[120px] opacity-10"
           style={{ 
-            background: 'radial-gradient(circle, rgba(92,124,229,0.3) 0%, rgba(92,124,229,0) 70%)' 
+            background: 'radial-gradient(circle, rgba(92,124,229,0.4) 0%, rgba(92,124,229,0) 70%)' 
           }}
         />
       </div>
 
-      {/* Snap-In Brand Presence */}
-      <div className="relative z-10 flex flex-col items-center gap-6 text-center px-4 w-full">
-        <h1 className="animate-snap-entry animate-bounce-settle fluid-brand-title whitespace-nowrap px-4 text-center">
-          BRUNST STUDIOS
-        </h1>
-        
-        <p className="opacity-0 animate-tagline-fade font-body text-primary/70 text-[10px] md:text-xs tracking-[0.4em] uppercase max-w-lg leading-relaxed italic">
-          Bringing together the world’s creative diversity
-        </p>
+      {/* Cinematic Presence Wrapper */}
+      <div className="relative z-10 flex flex-col items-center gap-8 text-center px-6 w-full max-w-4xl mx-auto">
+        {/* Logo Container */}
+        <div className="relative w-[60vw] max-w-[240px] aspect-square animate-cinematic-snap">
+          <Image 
+            src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=400&h=400&auto=format&fit=crop" 
+            alt="Brunst Studios Logo" 
+            fill 
+            className="object-contain invert brightness-200"
+            priority
+          />
+        </div>
+
+        {/* Text Container */}
+        <div className="space-y-4 animate-cinematic-snap">
+          <h1 className="fluid-brand-title whitespace-nowrap">
+            BRUNST STUDIOS
+          </h1>
+          
+          <p className="opacity-0 animate-tagline-reveal font-body text-primary/70 text-[10px] md:text-xs tracking-[0.4em] uppercase leading-relaxed italic">
+            Bringing together the world’s creative diversity
+          </p>
+        </div>
       </div>
     </div>
   );
