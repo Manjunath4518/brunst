@@ -40,7 +40,7 @@
   .site-main {
     @apply relative z-10 opacity-0;
     animation: mainReveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-    animation-delay: 3.5s;
+    animation-delay: 2.6s;
   }
   .inner {
     @apply max-w-[1000px] mx-auto px-8 py-20 md:py-32 text-center flex flex-col items-center justify-center;
@@ -61,30 +61,25 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Premium Cinematic Multi-Phase Animation */
-@keyframes cinematicSnap {
+/* Letter Typewriter Animation */
+@keyframes letterAppear {
   0% {
     opacity: 0;
-    transform: scale(0.85);
-    filter: blur(10px);
-  }
-  15% {
-    opacity: 1;
-    transform: scale(1.1);
-    filter: blur(0);
-  }
-  45% {
-    transform: scale(1.2);
-  }
-  75% {
-    transform: scale(1);
-  }
-  85% {
-    transform: scale(1.02);
+    transform: translateY(10px);
+    filter: blur(5px);
   }
   100% {
-    transform: scale(1);
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
   }
+}
+
+/* Post-text Pulse */
+@keyframes brandSettlePulse {
+  0% { transform: scale(1); filter: drop-shadow(0 0 0 transparent); }
+  50% { transform: scale(1.05); filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.3)); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 0 transparent); }
 }
 
 @keyframes taglineReveal {
@@ -93,20 +88,26 @@
 }
 
 @keyframes introFadeOut {
-  0% { opacity: 1; filter: blur(0); }
-  100% { opacity: 0; filter: blur(10px); }
+  0% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
 }
 
-.animate-cinematic-snap {
-  animation: cinematicSnap 3.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+.animate-letter {
+  display: inline-block;
+  opacity: 0;
+  animation: letterAppear 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.animate-brand-pulse {
+  animation: brandSettlePulse 0.8s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards;
 }
 
 .animate-tagline-reveal {
-  animation: taglineReveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 2.2s forwards;
+  animation: taglineReveal 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 1.5s forwards;
 }
 
 .animate-intro-exit {
-  animation: introFadeOut 0.8s cubic-bezier(0.65, 0, 0.35, 1) 3.5s forwards;
+  animation: introFadeOut 0.8s cubic-bezier(0.65, 0, 0.35, 1) 2.6s forwards;
 }
 
 .fluid-brand-title {
