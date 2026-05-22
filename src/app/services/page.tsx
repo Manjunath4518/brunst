@@ -24,15 +24,15 @@ export default function Services() {
 
   return (
     <div className="site-main">
-      <section className="inner space-y-24">
-        <header className="space-y-6">
+      <section className="inner pt-40 space-y-12">
+        <div className="space-y-4">
           <h1 className="luxury-heading text-3xl md:text-4xl tracking-[1em]">Write. Create. Play. Design</h1>
           <p className="font-body text-primary/40 text-[10px] tracking-[0.4em] uppercase">Home to a world of industries</p>
-        </header>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-20 w-full text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
           {sections.map((section, index) => (
-            <div key={index} className="space-y-8">
+            <div key={index} className="subtle-box text-left space-y-8 h-full">
               <h2 className="luxury-heading text-lg md:text-xl tracking-[0.5em] border-b border-primary/10 pb-6">
                 {section.title}
               </h2>
@@ -47,7 +47,7 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="pt-20">
+        <div className="pt-12">
           <LuxuryButton href="/contact">Connect Now!</LuxuryButton>
         </div>
       </section>

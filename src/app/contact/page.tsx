@@ -5,36 +5,36 @@ import LuxuryButton from '@/components/LuxuryButton';
 export default function Contact() {
   return (
     <div className="site-main">
-      <section className="inner space-y-20 max-w-3xl">
-        <header className="space-y-6">
-          <h1 className="luxury-heading text-3xl md:text-4xl tracking-[1.2em]">Contact Us</h1>
-        </header>
-
-        <div className="space-y-12 text-center font-body text-sm md:text-base tracking-[0.15em] leading-relaxed text-primary/60 uppercase">
-          <div className="space-y-4">
+      <section className="inner pt-40 space-y-12 max-w-3xl">
+        <div className="subtle-box space-y-12 text-center w-full">
+          <div className="space-y-4 font-body text-sm md:text-base tracking-[0.15em] text-primary/60 uppercase">
             <p>We are new, only on paper!</p>
             <p>The field has been ours since the last 730+ days!</p>
           </div>
 
-          <p className="font-headline text-2xl md:text-3xl italic text-primary/80 normal-case tracking-normal">
+          <p className="font-headline text-2xl md:text-3xl italic text-primary/80">
             A few words from us to you!
           </p>
 
-          <p>
-            As much as we know you deserve the full-fledged market experience, we are here to show you what a passionate team can do.
-          </p>
+          <div className="divider-line" />
 
-          <p>
-            From the very first step, we promise you will see what sets us apart from the rest.
-          </p>
+          <div className="space-y-8 font-body text-sm md:text-base tracking-[0.15em] text-primary/60 uppercase leading-relaxed">
+            <p>
+              As much as we know you deserve the full-fledged market experience, we are here to show you what a passionate team can do.
+            </p>
 
-          <p>
-            Our only dream is to bring your business and brand closer to the world in a weirdly beautiful and wild way.
-          </p>
+            <p>
+              From the very first step, we promise you will see what sets us apart from the rest.
+            </p>
 
-          <p className="font-headline text-xl md:text-2xl italic text-primary/80 normal-case tracking-normal">
-            Together, let’s ace the race, my friend
-          </p>
+            <p>
+              Our only dream is to bring your business and brand closer to the world in a weirdly beautiful and wild way.
+            </p>
+
+            <p className="font-headline text-xl md:text-2xl italic text-primary/80 normal-case tracking-normal">
+              Together, let’s ace the race, my friend
+            </p>
+          </div>
 
           <div className="space-y-6 pt-12">
             <p className="luxury-heading text-[10px] md:text-xs tracking-[0.5em]">Be part of Team Brunst</p>

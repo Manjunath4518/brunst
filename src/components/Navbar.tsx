@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -17,36 +16,44 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-8 py-6 md:px-12 md:py-8 flex items-center justify-between pointer-events-auto bg-background/80 backdrop-blur-md">
-      <Link href="/" className="group flex items-center gap-4">
-        <div className="relative w-8 h-8 transition-transform duration-500 group-hover:scale-110">
-           <Image 
-            src="/brunst.png" 
-            alt="Brunst Logo" 
-            fill 
-            className="object-contain"
-          />
-        </div>
-      </Link>
-
-      <div className="hidden md:flex items-center gap-10">
-        {navLinks.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className={cn(
-              "relative text-[9px] uppercase tracking-[0.4em] font-medium transition-colors duration-500",
-              pathname === link.href ? "text-primary" : "text-primary/40 hover:text-primary"
-            )}
-          >
-            {link.name}
-            <span className={cn(
-              "absolute -bottom-1 left-0 w-0 h-[0.5px] bg-primary transition-all duration-700",
-              pathname === link.href ? "w-full" : ""
-            )} />
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/5">
+      <div className="max-w-[1000px] mx-auto px-8 py-6">
+        {/* Branding Block - Always Centered Horizontal Row */}
+        <div className="flex items-center justify-center gap-6 mb-4">
+          <Link href="/" className="relative w-16 h-16 md:w-20 md:h-20 transition-transform hover:scale-105">
+             <Image 
+              src="/brunst.png" 
+              alt="Brunst Logo" 
+              fill 
+              className="object-contain"
+              priority
+            />
           </Link>
-        ))}
+          <Link href="/" className="font-headline text-2xl md:text-3xl uppercase tracking-[0.2em] text-primary hover:opacity-80 transition-opacity">
+            BRUNST STUDIOS
+          </Link>
+        </div>
+
+        {/* Global Navigation Links */}
+        <nav className="flex items-center justify-center gap-6 md:gap-10">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={cn(
+                "relative text-[9px] uppercase tracking-[0.4em] font-medium transition-colors duration-500",
+                pathname === link.href ? "text-primary" : "text-primary/40 hover:text-primary"
+              )}
+            >
+              {link.name}
+              <span className={cn(
+                "absolute -bottom-1 left-0 w-0 h-[0.5px] bg-primary transition-all duration-700",
+                pathname === link.href ? "w-full" : ""
+              )} />
+            </Link>
+          ))}
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }
