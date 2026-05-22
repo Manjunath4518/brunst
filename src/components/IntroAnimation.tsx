@@ -8,26 +8,31 @@ export default function IntroAnimation() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 4500);
+    }, 5500); // Allow time for the fade-out exit animation
     return () => clearTimeout(timer);
   }, []);
 
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background pointer-events-none overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-[80vw] h-[80vw] max-w-[800px] rounded-full bg-accent/20 animate-intro-glow blur-[80px]" />
+    <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background pointer-events-none overflow-hidden animate-cinematic-exit">
+      {/* Background Glow Aura */}
+      <div className="absolute inset-0 flex items-center justify-center animate-cinematic-aura">
+        <div 
+          className="w-[100vw] h-[100vw] rounded-full opacity-30 blur-[100px]"
+          style={{ 
+            background: 'radial-gradient(circle, rgba(92,124,229,0.4) 0%, rgba(92,124,229,0) 70%)' 
+          }}
+        />
       </div>
 
-      {/* Main Text Animation */}
-      <div className="relative z-10 flex flex-col items-center gap-8 text-center px-8">
-        <h1 className="animate-intro-text font-headline text-3xl md:text-5xl lg:text-7xl text-primary tracking-[1em] uppercase whitespace-nowrap">
+      {/* Cinematic Title & Tagline */}
+      <div className="relative z-10 flex flex-col items-center gap-12 text-center px-8">
+        <h1 className="animate-cinematic-title font-headline text-4xl md:text-6xl lg:text-8xl text-primary tracking-[1em] uppercase whitespace-nowrap">
           Brunst Studios
         </h1>
         
-        <p className="opacity-0 animate-[textReveal_1s_ease_3.2s_forwards] font-body text-primary/60 text-[10px] md:text-xs tracking-[0.5em] uppercase max-w-lg leading-relaxed">
+        <p className="opacity-0 animate-cinematic-tagline font-body text-primary/70 text-[10px] md:text-xs tracking-[0.5em] uppercase max-w-lg leading-relaxed italic">
           Bringing together the world&apos;s creative diversity
         </p>
       </div>
