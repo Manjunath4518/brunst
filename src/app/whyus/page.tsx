@@ -7,30 +7,34 @@ export default function WhyUs() {
     <div className="site-main">
       <section className="inner space-y-12 max-w-3xl">
         <div className="space-y-12 text-center w-full">
-          <div className="space-y-6 text-primary/60 uppercase tracking-[0.15em] font-body text-sm md:text-base leading-relaxed">
+          <header className="space-y-6">
+            <h1 className="luxury-heading text-3xl md:text-4xl">Why Us</h1>
+          </header>
+          
+          <div className="space-y-8 text-primary/60 font-body text-sm md:text-base leading-relaxed">
             <p>
               Brunst, earlier, was just an idea born out of the blue.
               And, what’s better than to stick to the moment of blue?
             </p>
 
-            <p className="font-headline text-2xl md:text-3xl italic text-primary/80 normal-case tracking-normal">
+            <p className="font-headline text-2xl md:text-3xl italic text-primary/80">
               That’s what happened!
             </p>
 
             <p>
-              What just was a fleeting thought now became the moment the world will love!
+              What just was a fleeting thought now became the moment the world will love.
             </p>
           </div>
 
           <div className="divider-line" />
 
-          <div className="space-y-8 text-primary/60 uppercase tracking-[0.15em] font-body text-sm md:text-base leading-relaxed">
+          <div className="space-y-8 text-primary/60 font-body text-sm md:text-base leading-relaxed">
             <p>
               The Blues know what the market needs.
               You may argue that many understand the market better. So, what’s special here?
             </p>
 
-            <p className="font-headline text-xl md:text-2xl italic text-primary/80 normal-case tracking-normal">
+            <p className="font-headline text-xl md:text-2xl italic text-primary/80">
               Well, imagine your business or brand having someone who can not only turn heads but also create a beeline towards your product?
             </p>
 

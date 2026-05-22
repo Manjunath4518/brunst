@@ -1,11 +1,10 @@
-
 'use client';
 
 import { useEffect, useState } from 'react';
 
 export default function IntroAnimation() {
   const [isVisible, setIsVisible] = useState(true);
-  const brandName = "BRUNST STUDIOS";
+  const brandName = "Brunst Studios";
   const letterDelay = 80; // ms
   const buildTime = brandName.length * letterDelay;
   const holdTime = 2000; // 2 seconds hold
@@ -32,10 +31,9 @@ export default function IntroAnimation() {
         />
       </div>
 
-      {/* Typewriter Container - NO LOGO */}
       <div className="relative z-10 flex flex-col items-center gap-6 text-center px-6 w-full max-w-4xl mx-auto">
         <h1 
-          className="text-3xl md:text-5xl lg:text-6xl font-headline tracking-[0.2em] uppercase text-primary animate-brand-settle"
+          className="text-3xl md:text-5xl lg:text-6xl font-headline tracking-[0.05em] text-primary animate-brand-settle"
           style={{ animationDelay: `${buildTime + 300}ms` }}
         >
           {brandName.split('').map((char, index) => (
@@ -50,10 +48,10 @@ export default function IntroAnimation() {
         </h1>
         
         <p 
-          className="opacity-0 animate-tagline-reveal font-body text-primary/70 text-[10px] md:text-xs tracking-[0.4em] uppercase leading-relaxed italic"
+          className="opacity-0 animate-tagline-reveal font-body text-primary/70 text-[10px] md:text-sm tracking-[0.1em] leading-relaxed italic"
           style={{ animationDelay: `${buildTime + 800}ms` }}
         >
-          Bringing together the world’s creative diversity
+          Bringing together the world's creative diversity
         </p>
       </div>
     </div>

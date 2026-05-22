@@ -46,10 +46,10 @@
     @apply max-w-[1000px] mx-auto px-8 py-40 text-center flex flex-col items-center justify-center;
   }
   .luxury-heading {
-    @apply font-headline uppercase tracking-[0.4em] text-primary mb-6;
+    @apply font-headline tracking-[0.1em] text-primary mb-6;
   }
   .luxury-button {
-    @apply rounded-[2.5rem] border border-primary/20 px-8 py-3 text-[10px] uppercase tracking-[0.4em] transition-all duration-500 bg-transparent inline-flex items-center justify-center min-h-[2.75rem] text-primary whitespace-nowrap;
+    @apply rounded-[2.5rem] border border-primary/20 px-8 py-3 text-[12px] tracking-[0.1em] transition-all duration-500 bg-transparent inline-flex items-center justify-center min-h-[2.75rem] text-primary whitespace-nowrap;
   }
   .luxury-button:hover {
     @apply border-accent text-accent scale-[1.02] shadow-[0_0_20px_rgba(92,124,229,0.15)];

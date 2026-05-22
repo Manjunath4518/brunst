@@ -7,15 +7,19 @@ export default function Brunstcam() {
     <div className="site-main">
       <section className="inner space-y-12 max-w-4xl">
         <div className="space-y-12 text-center w-full">
+          <header className="space-y-4">
+            <h1 className="luxury-heading text-3xl md:text-4xl">Brunstcam</h1>
+          </header>
+
           <p className="font-headline text-2xl md:text-3xl italic text-primary/70 leading-relaxed max-w-2xl mx-auto">
             All shot through an iPhone, but with a heart full of passion!
           </p>
           
           <div className="divider-line" />
 
-          <div className="space-y-8 font-body text-sm md:text-base tracking-[0.2em] text-primary/50 max-w-2xl mx-auto uppercase">
-            <p>Be it a random click, or an intentional shot!</p>
-            <p>Be it just a rough cut clip, or a well curated video!</p>
+          <div className="space-y-8 font-body text-sm md:text-base text-primary/50 max-w-2xl mx-auto">
+            <p>Be it a random click, or an intentional shot.</p>
+            <p>Be it just a rough cut clip, or a well curated video.</p>
           </div>
 
           <div className="divider-line" />
@@ -26,12 +30,12 @@ export default function Brunstcam() {
 
           <div className="divider-line" />
 
-          <p className="font-body text-xs md:text-sm tracking-[0.3em] text-primary/40 leading-loose max-w-2xl mx-auto uppercase">
+          <p className="font-body text-xs md:text-sm text-primary/40 leading-loose max-w-2xl mx-auto">
             All we need is one chance, a trial, for you to see what we can do, and for us to create beyond what you expect!
           </p>
 
           <div className="pt-12">
-            <LuxuryButton href="/contact">Connect with us this instant, for booking a trail through Brunstcam!</LuxuryButton>
+            <LuxuryButton href="/contact">Book a trail through Brunstcam</LuxuryButton>
           </div>
         </div>
       </section>
