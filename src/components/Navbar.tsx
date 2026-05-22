@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-8 py-6 md:px-12 md:py-8 flex items-center justify-between pointer-events-auto bg-background/50 backdrop-blur-sm">
       <Link href="/" className="group flex items-center gap-4">
-        <div className="relative w-10 h-10 transition-transform duration-500 group-hover:scale-110">
+        <div className="relative w-8 h-8 md:w-10 md:h-10 transition-transform duration-500 group-hover:scale-110">
            <Image 
             src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=100&h=100&auto=format&fit=crop" 
             alt="Brunst Logo" 
@@ -29,7 +29,7 @@ export default function Navbar() {
         </div>
       </Link>
 
-      <div className="hidden md:flex items-center gap-8">
+      <div className="hidden md:flex items-center gap-10">
         {navLinks.map((link) => (
           <Link
             key={link.href}

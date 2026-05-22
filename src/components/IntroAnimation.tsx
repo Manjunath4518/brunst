@@ -5,13 +5,17 @@ import { useEffect, useState } from 'react';
 export default function IntroAnimation() {
   const [isVisible, setIsVisible] = useState(true);
   const brandName = "BRUNST STUDIOS";
+  const letterDelay = 80; // ms
+  const buildTime = brandName.length * letterDelay;
+  const holdTime = 2000; // 2 seconds hold after full text
+  const totalIntroTime = buildTime + holdTime + 800; // buffer for tagline/exit
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-    }, 3500); 
+    }, totalIntroTime + 1000); 
     return () => clearTimeout(timer);
-  }, []);
+  }, [totalIntroTime]);
 
   if (!isVisible) return null;
 
@@ -29,19 +33,25 @@ export default function IntroAnimation() {
 
       {/* Typewriter Container */}
       <div className="relative z-10 flex flex-col items-center gap-6 text-center px-6 w-full max-w-4xl mx-auto">
-        <h1 className="fluid-brand-title whitespace-nowrap animate-brand-pulse">
+        <h1 
+          className="fluid-brand-title whitespace-nowrap animate-brand-settle"
+          style={{ animationDelay: `${buildTime + 300}ms` }}
+        >
           {brandName.split('').map((char, index) => (
             <span 
               key={index} 
-              className="animate-letter"
-              style={{ animationDelay: `${index * 40}ms` }}
+              className="animate-letter-emerge"
+              style={{ animationDelay: `${index * letterDelay}ms` }}
             >
               {char === ' ' ? '\u00A0' : char}
             </span>
           ))}
         </h1>
         
-        <p className="opacity-0 animate-tagline-reveal font-body text-primary/70 text-[10px] md:text-xs tracking-[0.4em] uppercase leading-relaxed italic">
+        <p 
+          className="opacity-0 animate-tagline-reveal font-body text-primary/70 text-[10px] md:text-xs tracking-[0.4em] uppercase leading-relaxed italic"
+          style={{ animationDelay: `${buildTime + 800}ms` }}
+        >
           Bringing together the world’s creative diversity
         </p>
       </div>
