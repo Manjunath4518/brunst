@@ -1,0 +1,53 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Abstract minimalist luxury background with soft shadows",
+      "imageUrl": "https://picsum.photos/seed/brunst1/1920/1080",
+      "imageHint": "luxury minimalist"
+    },
+    {
+      "id": "write",
+      "description": "Elegant desk with fountain pen and parchment",
+      "imageUrl": "https://picsum.photos/seed/brunst2/800/1000",
+      "imageHint": "luxury writing"
+    },
+    {
+      "id": "create",
+      "description": "High-end brand mood board",
+      "imageUrl": "https://picsum.photos/seed/brunst3/800/1000",
+      "imageHint": "fashion branding"
+    },
+    {
+      "id": "play",
+      "description": "Motion-blurred athlete in ivory and blue aesthetic",
+      "imageUrl": "https://picsum.photos/seed/brunst4/800/1000",
+      "imageHint": "luxury sport"
+    },
+    {
+      "id": "design",
+      "description": "Minimalist modern interior with clean lines",
+      "imageUrl": "https://picsum.photos/seed/brunst5/800/1000",
+      "imageHint": "luxury interior"
+    },
+    {
+      "id": "cam-1",
+      "description": "Cinematic street scene at dusk",
+      "imageUrl": "https://picsum.photos/seed/cam1/1200/800",
+      "imageHint": "cinematic film"
+    },
+    {
+      "id": "cam-2",
+      "description": "Close up of high-fashion texture",
+      "imageUrl": "https://picsum.photos/seed/cam2/1200/800",
+      "imageHint": "fashion texture"
+    },
+    {
+      "id": "cam-3",
+      "description": "Abstract architecture in soft light",
+      "imageUrl": "https://picsum.photos/seed/cam3/1200/800",
+      "imageHint": "abstract architecture"
+    }
+  ]
+}
