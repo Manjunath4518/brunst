@@ -7,16 +7,16 @@ export default function Contact() {
     <div className="site-main">
       <section className="inner space-y-20 max-w-3xl">
         <header className="space-y-6">
-          <h1 className="luxury-heading text-4xl tracking-[1.2em]">Contact Us</h1>
+          <h1 className="luxury-heading text-3xl md:text-4xl tracking-[1.2em]">Contact Us</h1>
         </header>
 
-        <div className="space-y-12 text-center font-body text-lg tracking-widest leading-relaxed text-primary/70">
+        <div className="space-y-12 text-center font-body text-sm md:text-base tracking-[0.15em] leading-relaxed text-primary/60 uppercase">
           <div className="space-y-4">
             <p>We are new, only on paper!</p>
             <p>The field has been ours since the last 730+ days!</p>
           </div>
 
-          <p className="font-headline text-2xl italic text-primary/80">
+          <p className="font-headline text-2xl md:text-3xl italic text-primary/80 normal-case tracking-normal">
             A few words from us to you!
           </p>
 
@@ -32,13 +32,13 @@ export default function Contact() {
             Our only dream is to bring your business and brand closer to the world in a weirdly beautiful and wild way.
           </p>
 
-          <p className="font-headline text-xl italic text-primary/80">
+          <p className="font-headline text-xl md:text-2xl italic text-primary/80 normal-case tracking-normal">
             Together, let’s ace the race, my friend
           </p>
 
           <div className="space-y-6 pt-12">
-            <p className="luxury-heading text-xs tracking-[0.5em]">Be part of Team Brunst</p>
-            <p className="text-sm text-primary/50 uppercase tracking-[0.3em]">
+            <p className="luxury-heading text-[10px] md:text-xs tracking-[0.5em]">Be part of Team Brunst</p>
+            <p className="text-[10px] md:text-xs text-primary/40 uppercase tracking-[0.3em]">
               As a client, friend, author, sponsor, or as a team member!
             </p>
             <div className="pt-8">

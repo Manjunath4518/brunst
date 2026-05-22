@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    --background: 51 60% 97%; /* Ivory */
-    --foreground: 226 73% 63%; /* Blue */
-    --card: 51 60% 98%;
-    --card-foreground: 226 73% 63%;
-    --popover: 51 60% 98%;
-    --popover-foreground: 226 73% 63%;
-    --primary: 226 73% 63%;
-    --primary-foreground: 51 60% 97%;
-    --secondary: 226 73% 90%;
-    --secondary-foreground: 226 73% 63%;
-    --muted: 226 20% 90%;
-    --muted-foreground: 226 40% 50%;
-    --accent: 226 73% 63%;
-    --accent-foreground: 51 60% 97%;
+    --background: 226 73% 63%; /* Deep Blue from logo */
+    --foreground: 51 60% 97%; /* Ivory from logo */
+    --card: 226 73% 60%;
+    --card-foreground: 51 60% 97%;
+    --popover: 226 73% 60%;
+    --popover-foreground: 51 60% 97%;
+    --primary: 51 60% 97%;
+    --primary-foreground: 226 73% 63%;
+    --secondary: 226 73% 50%;
+    --secondary-foreground: 51 60% 97%;
+    --muted: 226 50% 55%;
+    --muted-foreground: 51 60% 80%;
+    --accent: 180 100% 50%; /* Cyan accent */
+    --accent-foreground: 226 73% 63%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 226 73% 63% / 0.2;
-    --input: 226 73% 63% / 0.2;
-    --ring: 226 73% 63%;
+    --border: 51 60% 97% / 0.2;
+    --input: 51 60% 97% / 0.2;
+    --ring: 180 100% 50%;
     --radius: 2.5rem;
   }
 }
@@ -32,14 +32,14 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground selection:bg-primary/20 font-body antialiased overflow-x-hidden;
+    @apply bg-background text-foreground selection:bg-accent/30 font-body antialiased overflow-x-hidden;
   }
 }
 
 @layer utilities {
   .site-main {
     @apply relative z-10 opacity-0 animate-fade-reveal;
-    animation-delay: 3.5s;
+    animation-delay: 4.5s;
     animation-fill-mode: forwards;
   }
   .inner {
@@ -49,7 +49,10 @@
     @apply font-headline uppercase tracking-[0.6em] text-primary mb-6;
   }
   .luxury-button {
-    @apply rounded-[2.5rem] border border-primary/30 px-8 py-2.5 text-[10px] uppercase tracking-[0.4em] transition-all duration-500 hover:border-primary hover:shadow-[0_0_25px_rgba(92,124,229,0.3)] bg-transparent inline-flex items-center justify-center min-h-[2.25rem] text-primary;
+    @apply rounded-[2.5rem] border border-primary/40 px-8 py-3 text-[10px] uppercase tracking-[0.4em] transition-all duration-500 bg-transparent inline-flex items-center justify-center min-h-[2.25rem] text-primary whitespace-nowrap;
+  }
+  .luxury-button:hover {
+    @apply border-accent text-accent scale-[1.05] shadow-[0_0_20px_rgba(0,255,255,0.4)];
   }
 }
 
@@ -62,13 +65,23 @@
   animation: textReveal 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
-@keyframes landingSequence {
-  0% { transform: scale(0.5); opacity: 0; }
-  40% { transform: scale(1.2); opacity: 1; }
-  70% { transform: scale(1); opacity: 1; }
-  100% { transform: scale(1); opacity: 0; }
+@keyframes introSequence {
+  0% { transform: scale(0.3); opacity: 0; filter: blur(20px); }
+  40% { transform: scale(1.3); opacity: 1; filter: blur(0px); }
+  60% { transform: scale(1.3); opacity: 1; filter: blur(0px); }
+  85% { transform: scale(1); opacity: 1; filter: blur(0px); }
+  100% { transform: scale(1); opacity: 0; filter: blur(0px); }
 }
 
-.animate-landing {
-  animation: landingSequence 3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+.animate-intro-text {
+  animation: introSequence 4s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.15; filter: blur(80px); transform: scale(1); }
+  50% { opacity: 0.25; filter: blur(100px); transform: scale(1.1); }
+}
+
+.animate-intro-glow {
+  animation: glowPulse 4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
 }

@@ -9,11 +9,11 @@ export default function WhatWeDo() {
       items: ["Editing & Proofreading", "Design", "Formatting", "Publishing Setup", "Marketing Campaigns", "Optional Add-ons"]
     },
     {
-      title: "Home of Brands (Create)",
+      title: "Home of Brands(Create)",
       items: ["Branding & Advertising", "Marketing", "Platform Management", "Wall Branding", "Business Development & Strategy"]
     },
     {
-      title: "Home of Athletes (Play)",
+      title: "Home of Athletes(Play)",
       items: ["Talent Management", "Personal Branding", "Brand Endorsements & Partnerships", "PR & Reputation Management", "Wellness Consulting"]
     },
     {
@@ -26,19 +26,19 @@ export default function WhatWeDo() {
     <div className="site-main">
       <section className="inner space-y-24">
         <header className="space-y-6">
-          <h1 className="luxury-heading text-4xl tracking-[1em]">Write. Create. Play. Design</h1>
-          <p className="font-body text-primary/40 text-xs tracking-[0.4em] uppercase">Home to a world of industries</p>
+          <h1 className="luxury-heading text-3xl md:text-4xl tracking-[1em]">Write. Create. Play. Design</h1>
+          <p className="font-body text-primary/40 text-[10px] tracking-[0.4em] uppercase">Home to a world of industries</p>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-24 w-full text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-20 w-full text-left">
           {sections.map((section, index) => (
             <div key={index} className="space-y-8">
-              <h2 className="luxury-heading text-xl tracking-[0.5em] border-b border-primary/10 pb-4">
+              <h2 className="luxury-heading text-lg md:text-xl tracking-[0.5em] border-b border-primary/10 pb-6">
                 {section.title}
               </h2>
               <ul className="space-y-4">
                 {section.items.map((item, i) => (
-                  <li key={i} className="font-body text-sm tracking-widest text-primary/70">
+                  <li key={i} className="font-body text-xs md:text-sm tracking-[0.3em] text-primary/60 uppercase">
                     {item}
                   </li>
                 ))}

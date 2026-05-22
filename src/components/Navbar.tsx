@@ -16,26 +16,26 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-12 py-10 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-8 py-8 md:px-12 md:py-10 flex items-center justify-between">
       <Link href="/" className="group flex items-center gap-4">
-        <div className="relative w-10 h-10 transition-transform duration-500 group-hover:scale-110">
+        <div className="relative w-8 h-8 transition-transform duration-500 group-hover:scale-110">
            <Image 
-            src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=200&h=200&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=100&h=100&auto=format&fit=crop" 
             alt="Brunst Logo" 
             fill 
-            className="object-contain"
-            data-ai-hint="logo icon"
+            className="object-contain invert brightness-200"
+            data-ai-hint="luxury logo"
           />
         </div>
       </Link>
 
-      <div className="flex items-center gap-10">
+      <div className="hidden md:flex items-center gap-8">
         {navLinks.map((link) => (
           <Link
             key={link.href}
             href={link.href}
             className={cn(
-              "relative text-[9px] uppercase tracking-[0.4em] font-medium transition-colors duration-500",
+              "relative text-[8px] uppercase tracking-[0.4em] font-medium transition-colors duration-500",
               pathname === link.href ? "text-primary" : "text-primary/40 hover:text-primary"
             )}
           >
