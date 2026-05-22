@@ -6,9 +6,9 @@ import { cn } from '@/lib/utils';
 import Image from 'next/image';
 
 const navLinks = [
-  { name: 'What We Do', href: '/what-we-do' },
+  { name: 'What We Do', href: '/services' },
   { name: 'Brunstcam', href: '/brunstcam' },
-  { name: 'Why Us', href: '/why-us' },
+  { name: 'Why Us', href: '/whyus' },
   { name: 'Contact Us', href: '/contact' },
 ];
 
@@ -16,7 +16,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-8 py-8 md:px-12 md:py-10 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-8 py-8 md:px-12 md:py-10 flex items-center justify-between pointer-events-auto">
       <Link href="/" className="group flex items-center gap-4">
         <div className="relative w-8 h-8 transition-transform duration-500 group-hover:scale-110">
            <Image 

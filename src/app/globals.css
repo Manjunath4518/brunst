@@ -4,24 +4,24 @@
 
 @layer base {
   :root {
-    --background: 226 73% 63%; /* Deep Blue */
+    --background: 226 73% 10%; /* Deep Blue */
     --foreground: 51 60% 97%; /* Ivory */
-    --card: 226 73% 60%;
+    --card: 226 73% 12%;
     --card-foreground: 51 60% 97%;
-    --popover: 226 73% 60%;
+    --popover: 226 73% 12%;
     --popover-foreground: 51 60% 97%;
     --primary: 51 60% 97%;
-    --primary-foreground: 226 73% 63%;
-    --secondary: 226 73% 50%;
+    --primary-foreground: 226 73% 10%;
+    --secondary: 226 73% 20%;
     --secondary-foreground: 51 60% 97%;
-    --muted: 226 50% 55%;
+    --muted: 226 30% 25%;
     --muted-foreground: 51 60% 80%;
-    --accent: 180 100% 50%; /* Cyan accent */
-    --accent-foreground: 226 73% 63%;
+    --accent: 180 100% 50%; /* Cyan glow */
+    --accent-foreground: 226 73% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-    --border: 51 60% 97% / 0.2;
-    --input: 51 60% 97% / 0.2;
+    --border: 51 60% 97% / 0.1;
+    --input: 51 60% 97% / 0.1;
     --ring: 180 100% 50%;
     --radius: 2.5rem;
   }
@@ -38,9 +38,9 @@
 
 @layer utilities {
   .site-main {
-    @apply relative z-10 opacity-0 animate-fade-reveal;
+    @apply relative z-10 opacity-0;
+    animation: mainReveal 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
     animation-delay: 5s;
-    animation-fill-mode: forwards;
   }
   .inner {
     @apply max-w-[1000px] mx-auto px-8 py-32 md:py-48 text-center flex flex-col items-center justify-center;
@@ -49,52 +49,48 @@
     @apply font-headline uppercase tracking-[0.6em] text-primary mb-6;
   }
   .luxury-button {
-    @apply rounded-[2.5rem] border border-primary/40 px-8 py-3 text-[10px] uppercase tracking-[0.4em] transition-all duration-500 bg-transparent inline-flex items-center justify-center min-h-[2.25rem] text-primary whitespace-nowrap;
+    @apply rounded-[2.5rem] border border-primary/20 px-8 py-3 text-[10px] uppercase tracking-[0.4em] transition-all duration-500 bg-transparent inline-flex items-center justify-center min-h-[2.25rem] text-primary whitespace-nowrap;
   }
   .luxury-button:hover {
-    @apply border-accent text-accent scale-[1.05] shadow-[0_0_20px_rgba(0,255,255,0.4)];
+    @apply border-accent text-accent scale-[1.05] shadow-[0_0_30px_rgba(0,255,255,0.3)];
   }
 }
 
-@keyframes textReveal {
-  from { opacity: 0; transform: translateY(10px); }
+@keyframes mainReveal {
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.animate-fade-reveal {
-  animation: textReveal 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-}
-
 /* Cinematic Intro Sequence */
-@keyframes cinematicAura {
+@keyframes auraSpread {
   0% { opacity: 0; transform: scale(0.8); }
-  100% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0.4; transform: scale(1); }
 }
 
 @keyframes cinematicTitle {
   0% { opacity: 0; transform: scale(0.2); filter: blur(30px); }
-  30% { opacity: 1; transform: scale(1.4); filter: blur(0px); }
-  50% { transform: scale(1.45); }
-  70% { transform: scale(1.4); }
+  35% { opacity: 1; transform: scale(1.4); filter: blur(0px); }
+  50% { transform: scale(1.45); filter: blur(0px); text-shadow: 0 0 20px rgba(253, 251, 242, 0.4); }
+  75% { transform: scale(1); filter: blur(0px); }
   100% { opacity: 1; transform: scale(1); filter: blur(0px); }
 }
 
 @keyframes cinematicTagline {
-  0% { opacity: 0; transform: translateY(20px); }
+  0% { opacity: 0; transform: translateY(15px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes cinematicExit {
-  0% { opacity: 1; filter: blur(0px); }
-  100% { opacity: 0; filter: blur(10px); }
+  0% { opacity: 1; filter: blur(0px); transform: scale(1); }
+  100% { opacity: 0; filter: blur(15px); transform: scale(1.05); }
 }
 
-.animate-cinematic-aura {
-  animation: cinematicAura 3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+.animate-aura-spread {
+  animation: auraSpread 3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
 .animate-cinematic-title {
-  animation: cinematicTitle 4s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  animation: cinematicTitle 4.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
 .animate-cinematic-tagline {
@@ -102,5 +98,5 @@
 }
 
 .animate-cinematic-exit {
-  animation: cinematicExit 1s cubic-bezier(0.65, 0, 0.35, 1) 4.5s forwards;
+  animation: cinematicExit 1.2s cubic-bezier(0.65, 0, 0.35, 1) 4.8s forwards;
 }
