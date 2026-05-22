@@ -33,14 +33,17 @@ export default function IntroAnimation() {
 
       <div className="relative z-10 flex flex-col items-center gap-6 text-center px-6 w-full max-w-4xl mx-auto">
         <h1 
-          className="text-3xl md:text-5xl lg:text-6xl font-headline tracking-[0.05em] text-primary animate-brand-settle"
+          className="text-3xl md:text-5xl lg:text-6xl font-headline tracking-[0.02em] text-primary animate-brand-settle"
           style={{ animationDelay: `${buildTime + 300}ms` }}
         >
           {brandName.split('').map((char, index) => (
             <span 
               key={index} 
               className="animate-letter-emerge"
-              style={{ animationDelay: `${index * letterDelay}ms` }}
+              style={{ 
+                animationDelay: `${index * letterDelay}ms`,
+                fontWeight: 300 // Start light for the weight-transition effect
+              }}
             >
               {char === ' ' ? '\u00A0' : char}
             </span>
@@ -48,10 +51,10 @@ export default function IntroAnimation() {
         </h1>
         
         <p 
-          className="opacity-0 animate-tagline-reveal font-body text-primary/70 text-[10px] md:text-sm tracking-[0.1em] leading-relaxed italic"
+          className="opacity-0 animate-tagline-reveal font-body text-primary/70 text-[10px] md:text-sm tracking-[0.05em] leading-relaxed italic"
           style={{ animationDelay: `${buildTime + 800}ms` }}
         >
-          Bringing together the world's creative diversity
+          Bringing Together The World’s Creative Diversity
         </p>
       </div>
     </div>

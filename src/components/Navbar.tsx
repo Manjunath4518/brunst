@@ -22,11 +22,11 @@ export default function Navbar() {
 
             {/* Text Block */}
             <div className="flex flex-col items-start">
-              <h1 className="font-headline text-2xl md:text-3xl tracking-[0.05em] text-primary">
+              <h1 className="font-headline text-2xl md:text-3xl tracking-[0.02em] text-primary">
                 Brunst Studios
               </h1>
-              <p className="font-body text-primary/60 text-[10px] md:text-xs tracking-[0.05em] italic">
-                Aiming for only that stands out!
+              <p className="font-body text-primary/60 text-[10px] md:text-xs tracking-[0.02em] italic">
+                Aiming For Only That Stands Out!
               </p>
             </div>
           </Link>

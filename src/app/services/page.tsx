@@ -5,19 +5,19 @@ import LuxuryButton from '@/components/LuxuryButton';
 export default function Services() {
   const sections = [
     {
-      title: "Home of Authors (Write)",
+      title: "Home Of Authors (Write)",
       items: ["Editing & Proofreading", "Design", "Formatting", "Publishing Setup", "Marketing Campaigns", "Optional Add-ons"]
     },
     {
-      title: "Home of Brands (Create)",
+      title: "Home Of Brands (Create)",
       items: ["Branding & Advertising", "Marketing", "Platform Management", "Wall Branding", "Business Development & Strategy"]
     },
     {
-      title: "Home of Athletes (Play)",
+      title: "Home Of Athletes (Play)",
       items: ["Talent Management", "Personal Branding", "Brand Endorsements & Partnerships", "PR & Reputation Management", "Wellness Consulting"]
     },
     {
-      title: "Home of Interiors (Design)",
+      title: "Home Of Interiors (Design)",
       items: ["Luxury Interior Styling", "Concept-Based Interiors", "3D Visualization & Rendering", "Interior Consultation", "Custom Design Solutions", "Project Management"]
     }
   ];
@@ -27,7 +27,7 @@ export default function Services() {
       <section className="inner space-y-20">
         <header className="space-y-4">
           <h1 className="luxury-heading text-3xl md:text-4xl">Write. Create. Play. Design</h1>
-          <p className="font-body text-primary/40 text-[10px] md:text-xs tracking-[0.15em] uppercase">Home to a world of industries</p>
+          <p className="font-body text-primary/40 text-[10px] md:text-xs tracking-[0.08em]">Home To A World Of Industries</p>
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl mx-auto">

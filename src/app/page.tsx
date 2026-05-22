@@ -9,8 +9,8 @@ export default function Home() {
         <div className="subtle-box max-w-[800px] w-full space-y-12">
           {/* Hero Content */}
           <div className="text-center space-y-6">
-            <p className="font-headline text-lg md:text-xl italic text-primary/30 tracking-[0.1em]">
-              The Brunstverse of Creativity
+            <p className="font-headline text-lg md:text-xl italic text-primary/30 tracking-[0.05em]">
+              The Brunstverse Of Creativity
             </p>
           </div>
 
