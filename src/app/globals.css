@@ -1,12 +1,11 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 220 30% 97%; /* #F5F7FB Soft Pearl Ivory */
-    --foreground: 222 73% 25%; /* #112D6E Royal Blue */
+    --background: 220 30% 97%; /* Soft Ivory */
+    --foreground: 222 73% 25%; /* Royal Blue */
     --card: 0 0% 100%;
     --card-foreground: 222 73% 25%;
     --popover: 0 0% 100%;
@@ -34,25 +33,48 @@
     cursor: none !important;
   }
   body {
-    @apply bg-background text-foreground selection:bg-accent/30;
-    overflow-x: hidden;
+    @apply bg-background text-foreground selection:bg-accent/30 font-body antialiased overflow-x-hidden;
   }
 }
 
 @layer utilities {
+  .site-wrapper {
+    @apply relative min-h-screen w-full overflow-hidden;
+  }
+  .site-main {
+    @apply relative z-10 opacity-0 animate-site-entrance;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+  }
+  .inner {
+    @apply max-w-[1200px] mx-auto px-8 py-32 md:py-48 text-center flex flex-col items-center justify-center;
+  }
   .luxury-heading {
-    @apply font-headline uppercase tracking-[0.5em] text-primary;
+    @apply font-headline uppercase tracking-[0.6em] text-primary mb-6;
   }
   .luxury-button {
-    @apply rounded-full border border-primary/20 px-8 py-3 text-xs uppercase tracking-[0.3em] transition-all duration-500 hover:border-accent hover:text-accent hover:shadow-[0_0_20px_rgba(0,229,255,0.2)];
+    @apply rounded-[2.5rem] border border-primary/20 px-8 py-2.5 text-[10px] uppercase tracking-[0.3em] transition-all duration-500 hover:border-accent hover:text-accent hover:shadow-[0_0_20px_rgba(0,229,255,0.15)] bg-transparent inline-flex items-center justify-center min-h-[2.25rem];
   }
-  .glass-card {
-    @apply bg-white/5 backdrop-blur-md border border-white/10;
-  }
-  .parallax-bg {
+  .noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.05;
     pointer-events: none;
-    z-index: -1;
+    z-index: 50;
   }
+}
+
+@keyframes siteEntrance {
+  from { opacity: 0; transform: scale(0.98) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.animate-site-entrance {
+  animation: siteEntrance 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
 .intro-fade-out {
@@ -64,24 +86,16 @@
   to { opacity: 0; visibility: hidden; }
 }
 
-.scroll-container {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.scroll-container::-webkit-scrollbar {
-  display: none;
-}
-
 .cursor-glow {
   pointer-events: none;
   position: fixed;
   width: 40px;
   height: 40px;
-  background: radial-gradient(circle, rgba(0, 229, 255, 0.4) 0%, rgba(0, 229, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(0, 229, 255, 0.3) 0%, rgba(0, 229, 255, 0) 70%);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   z-index: 9999;
-  transition: width 0.3s, height 0.3s;
+  transition: width 0.3s, height 0.3s, background 0.3s;
 }
 
 .cursor-dot {

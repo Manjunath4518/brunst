@@ -1,36 +1,21 @@
-
 'use client';
 
-import { useEffect, useState } from 'react';
-
 export default function AmbientBackground() {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePos({
-        x: (e.clientX / window.innerWidth - 0.5) * 20,
-        y: (e.clientY / window.innerHeight - 0.5) * 20,
-      });
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
   return (
-    <div className="parallax-bg fixed inset-0 overflow-hidden bg-background">
-      <div 
-        className="absolute inset-0 flex items-center justify-center transition-transform duration-700 ease-out"
-        style={{ transform: `translate(${mousePos.x}px, ${mousePos.y}px)` }}
-      >
-        <div className="w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] opacity-[0.04] select-none pointer-events-none">
-          <svg viewBox="0 0 100 100" className="w-full h-full text-primary fill-current">
-            <path d="M20,20 L80,20 L80,80 L20,80 Z" fill="none" stroke="currentColor" strokeWidth="0.5" />
-            <text x="50" y="60" textAnchor="middle" fontSize="40" className="font-headline">B</text>
-          </svg>
+    <div className="fixed inset-0 z-0 overflow-hidden bg-background pointer-events-none">
+      {/* Soft blue ivory gradient base */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(187,255,255,0.08)_0%,transparent_50%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_bottom_right,transparent,rgba(17,45,110,0.02))]" />
+      
+      {/* Blurred Logo Layer */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-[0.08] blur-[80px]">
+        <div className="w-[60vw] h-[60vw] max-w-[600px] border border-primary flex items-center justify-center">
+          <span className="font-headline text-[30vw] md:text-[250px] text-primary">B</span>
         </div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-tr from-accent/5 via-transparent to-primary/5 pointer-events-none" />
+
+      {/* Noise Overlay */}
+      <div className="noise-overlay" />
     </div>
   );
 }
