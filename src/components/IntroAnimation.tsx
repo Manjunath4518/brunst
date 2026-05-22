@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -7,8 +8,8 @@ export default function IntroAnimation() {
   const brandName = "BRUNST STUDIOS";
   const letterDelay = 80; // ms
   const buildTime = brandName.length * letterDelay;
-  const holdTime = 2000; // 2 seconds hold after full text
-  const totalIntroTime = buildTime + holdTime + 800; // buffer for tagline/exit
+  const holdTime = 2000; // 2 seconds hold
+  const totalIntroTime = buildTime + holdTime + 800;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -31,10 +32,10 @@ export default function IntroAnimation() {
         />
       </div>
 
-      {/* Typewriter Container */}
+      {/* Typewriter Container - NO LOGO */}
       <div className="relative z-10 flex flex-col items-center gap-6 text-center px-6 w-full max-w-4xl mx-auto">
         <h1 
-          className="fluid-brand-title whitespace-nowrap animate-brand-settle"
+          className="text-3xl md:text-5xl lg:text-6xl font-headline tracking-[0.2em] uppercase text-primary animate-brand-settle"
           style={{ animationDelay: `${buildTime + 300}ms` }}
         >
           {brandName.split('').map((char, index) => (
