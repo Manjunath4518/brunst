@@ -24,30 +24,37 @@ export default function Services() {
 
   return (
     <div className="site-main">
-      <section className="inner pt-40 space-y-12">
-        <div className="space-y-4">
+      <section className="inner space-y-20">
+        <header className="space-y-4">
           <h1 className="luxury-heading text-3xl md:text-4xl tracking-[1em]">Write. Create. Play. Design</h1>
           <p className="font-body text-primary/40 text-[10px] tracking-[0.4em] uppercase">Home to a world of industries</p>
-        </div>
+        </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl mx-auto">
           {sections.map((section, index) => (
-            <div key={index} className="subtle-box text-left space-y-8 h-full">
-              <h2 className="luxury-heading text-lg md:text-xl tracking-[0.5em] border-b border-primary/10 pb-6">
-                {section.title}
-              </h2>
-              <ul className="space-y-4">
-                {section.items.map((item, i) => (
-                  <li key={i} className="font-body text-xs md:text-sm tracking-[0.3em] text-primary/60 uppercase">
-                    {item}
-                  </li>
-                ))}
-              </ul>
+            <div key={index}>
+              <div className="subtle-box text-left space-y-8 h-full">
+                <h2 className="luxury-heading text-lg md:text-xl tracking-[0.5em] border-b border-primary/10 pb-6">
+                  {section.title}
+                </h2>
+                <ul className="space-y-4">
+                  {section.items.map((item, i) => (
+                    <li key={i} className="font-body text-xs md:text-sm tracking-[0.3em] text-primary/60 uppercase">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              {index % 2 === 0 && index < sections.length - 1 && (
+                <div className="md:hidden divider-line my-12" />
+              )}
             </div>
           ))}
         </div>
 
-        <div className="pt-12">
+        <div className="divider-line" />
+
+        <div className="pt-4">
           <LuxuryButton href="/contact">Connect Now!</LuxuryButton>
         </div>
       </section>

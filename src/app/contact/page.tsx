@@ -5,12 +5,14 @@ import LuxuryButton from '@/components/LuxuryButton';
 export default function Contact() {
   return (
     <div className="site-main">
-      <section className="inner pt-40 space-y-12 max-w-3xl">
-        <div className="subtle-box space-y-12 text-center w-full">
+      <section className="inner space-y-12 max-w-3xl">
+        <div className="space-y-12 text-center w-full">
           <div className="space-y-4 font-body text-sm md:text-base tracking-[0.15em] text-primary/60 uppercase">
             <p>We are new, only on paper!</p>
             <p>The field has been ours since the last 730+ days!</p>
           </div>
+
+          <div className="divider-line" />
 
           <p className="font-headline text-2xl md:text-3xl italic text-primary/80">
             A few words from us to you!
@@ -35,6 +37,8 @@ export default function Contact() {
               Together, let’s ace the race, my friend
             </p>
           </div>
+
+          <div className="divider-line" />
 
           <div className="space-y-6 pt-12">
             <p className="luxury-heading text-[10px] md:text-xs tracking-[0.5em]">Be part of Team Brunst</p>

@@ -5,8 +5,8 @@ import LuxuryButton from '@/components/LuxuryButton';
 export default function WhyUs() {
   return (
     <div className="site-main">
-      <section className="inner pt-40 space-y-12 max-w-3xl">
-        <div className="subtle-box space-y-12 text-center w-full">
+      <section className="inner space-y-12 max-w-3xl">
+        <div className="space-y-12 text-center w-full">
           <div className="space-y-6 text-primary/60 uppercase tracking-[0.15em] font-body text-sm md:text-base leading-relaxed">
             <p>
               Brunst, earlier, was just an idea born out of the blue.
@@ -42,6 +42,8 @@ export default function WhyUs() {
               They not only understand but also plan to improve the business or brand in ways that bring authenticity to the centre stage, and what’s better than attracting the world through nothing but being yourself?
             </p>
           </div>
+
+          <div className="divider-line" />
 
           <div className="pt-8">
             <LuxuryButton href="/contact">Experience Excellence</LuxuryButton>
