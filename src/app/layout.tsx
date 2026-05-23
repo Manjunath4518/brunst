@@ -5,7 +5,30 @@ import AmbientBackground from '@/components/AmbientBackground';
 import CustomCursor from '@/components/CustomCursor';
 import PageTransition from '@/components/PageTransition';
 import IntroAnimation from '@/components/IntroAnimation';
+import { toTitleCase } from "@/app/lib/titleCase";
 
+
+function transformText(node: any): any {
+  if (typeof node === "string") {
+    return toTitleCase(node);
+  }
+
+  if (Array.isArray(node)) {
+    return node.map(transformText);
+  }
+
+  if (node?.props?.children) {
+    return {
+      ...node,
+      props: {
+        ...node.props,
+        children: transformText(node.props.children),
+      },
+    };
+  }
+
+  return node;
+}
 export const metadata: Metadata = {
   title: 'Brunst Studios | The Brunstverse Of Creativity',
   description: 'A Luxury Creative Agency For Authors, Brands, Athletes, And Interiors.',
@@ -31,8 +54,8 @@ export default function RootLayout({
         <PageTransition>
           <Navbar />
           <main className="relative min-h-screen">
-            {children}
-          </main>
+  {transformText(children)}
+</main>
         </PageTransition>
         <div className="fixed bottom-0 left-0 h-1 bg-accent/30 z-[60] transition-all duration-300" id="scroll-progress" />
       </body>

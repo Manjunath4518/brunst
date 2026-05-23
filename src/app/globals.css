@@ -36,6 +36,10 @@
   }
 }
 
+* {
+  text-transform: none !important;
+}
+
 @layer utilities {
   .site-main {
     @apply relative z-10 opacity-0;
