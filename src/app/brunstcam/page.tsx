@@ -6,13 +6,12 @@ import BackButton from '@/components/BackButton';
 export default function Brunstcam() {
   return (
     <div className="site-main">
+      <BackButton />
       <section className="inner space-y-12 max-w-4xl">
         <div className="space-y-12 text-center w-full flex flex-col items-center">
           <header className="space-y-4">
             <h1 className="luxury-heading text-4xl md:text-5xl font-bold">Brunstcam</h1>
           </header>
-
-          <BackButton />
 
           <p className="font-headline text-2xl md:text-3xl font-medium italic text-primary/70 leading-relaxed max-w-2xl mx-auto tracking-tight">
             All Shot Through An Iphone, But With A Heart Full Of Passion!

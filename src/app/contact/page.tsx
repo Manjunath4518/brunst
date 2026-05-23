@@ -6,13 +6,12 @@ import BackButton from '@/components/BackButton';
 export default function Contact() {
   return (
     <div className="site-main">
+      <BackButton />
       <section className="inner space-y-12 max-w-3xl">
         <div className="space-y-12 text-center w-full flex flex-col items-center">
           <header className="space-y-4">
             <h1 className="luxury-heading text-4xl md:text-5xl font-bold">Get In Touch</h1>
           </header>
-
-          <BackButton />
 
           <div className="space-y-4 font-body text-base md:text-lg font-normal text-primary/60">
             <p>We Are New, Only On Paper. </p>
