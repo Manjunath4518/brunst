@@ -1,18 +1,21 @@
 'use client';
 
 import LuxuryButton from '@/components/LuxuryButton';
+import BackButton from '@/components/BackButton';
 
 export default function Contact() {
   return (
     <div className="site-main">
       <section className="inner space-y-12 max-w-3xl">
-        <div className="space-y-12 text-center w-full">
+        <div className="space-y-12 text-center w-full flex flex-col items-center">
           <header className="space-y-4">
-            <h1 className="luxury-heading text-4xl md:text-5xl">Get In Touch</h1>
+            <h1 className="luxury-heading text-4xl md:text-5xl font-bold">Get In Touch</h1>
           </header>
 
+          <BackButton />
+
           <div className="space-y-4 font-body text-base md:text-lg font-normal text-primary/60">
-            <p>We Are New, Only On Paper.</p>
+            <p>We Are New, Only On Paper. </p>
             <p>The Field Has Been Ours For Over 730 Days.</p>
           </div>
 

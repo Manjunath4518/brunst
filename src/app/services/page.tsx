@@ -1,6 +1,7 @@
 'use client';
 
 import LuxuryButton from '@/components/LuxuryButton';
+import BackButton from '@/components/BackButton';
 
 export default function Services() {
   const sections = [
@@ -25,9 +26,12 @@ export default function Services() {
   return (
     <div className="site-main">
       <section className="inner space-y-20">
-        <header className="space-y-4">
-          <h1 className="luxury-heading text-4xl md:text-5xl">Write. Create. Play. Design.</h1>
+        <header className="space-y-4 w-full flex flex-col items-center">
+          <h1 className="luxury-heading text-4xl md:text-5xl font-bold">Write. Create. Play. Design.</h1>
           <p className="font-body text-primary/50 text-[12px] md:text-sm font-medium tracking-tight">Home To A World Of Industries</p>
+          <div className="w-full max-w-5xl pt-8">
+            <BackButton />
+          </div>
         </header>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl mx-auto">

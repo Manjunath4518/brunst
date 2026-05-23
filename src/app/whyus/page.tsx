@@ -1,15 +1,18 @@
 'use client';
 
 import LuxuryButton from '@/components/LuxuryButton';
+import BackButton from '@/components/BackButton';
 
 export default function WhyUs() {
   return (
     <div className="site-main">
       <section className="inner space-y-12 max-w-3xl">
-        <div className="space-y-12 text-center w-full">
+        <div className="space-y-12 text-center w-full flex flex-col items-center">
           <header className="space-y-6">
-            <h1 className="luxury-heading text-4xl md:text-5xl">Why Us</h1>
+            <h1 className="luxury-heading text-4xl md:text-5xl font-bold">Why Us</h1>
           </header>
+          
+          <BackButton />
           
           <div className="space-y-8 text-primary/70 font-body text-base md:text-lg font-normal leading-relaxed">
             <p>
