@@ -50,7 +50,7 @@ export default function Contact() {
               As A Client, Friend, Author, Sponsor, Or As A Team Member.
             </p>
             <div className="pt-8">
-              <LuxuryButton href="mailto:concierge@brunststudios.com">Connect Now</LuxuryButton>
+              <LuxuryButton href="mailto:chandrika@brunststudios.com">Connect Now</LuxuryButton>
             </div>
           </div>
         </div>
